@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Freeman&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gasoek-one-regular {
+  font-family: "Gasoek One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.freeman-regular {
+  font-family: "Freeman", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background: #000000;
+}
+
+.header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+}
+
+.hero1 {
+  line-height: 90px;
+  margin-right: 80px;
+}
+
+.hero2 {
+  line-height: 90px;
+  margin-left: 400px;
+}
+
+.logo1 {
+  margin-top: 20px;
+  line-height: 25px;
+}
+
+.gallery {
+  width: 200%;
+  height: 100%;
+}
+
+.item {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  background: #000;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.link a {
+  text-decoration: none;
+  color: #fff;
+}
+
+i {
+  position: relative;
+  top: 1.5px;
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  display: flex;
+}
+
+.bar {
+  width: 10vw;
+  height: 105vh;
+  background: #1a1a1a;
+}
+
+.counter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 100;
+  color: #b8b8b8;
+  padding: 0.1em 0.2em;
+  font-size: 14vw;
+  font-family: "Gasoek One", serif;
+}
+
+section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1em;
+  background-color: #cacaca;
+  color: #fff;
+}
+
+.outro {
+  background-color: #cacaca;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.sticky-card {
+  background-color: #e3e3e3;
+}
+.sticky-cards {
+  position: sticky;
+  top: 0;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  width: 25%;
+  height: 70%;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  background-color: #202020;
+  color: #fff;
+}
+
+.card-img {
+  flex: 1 1 0;
+  min-height: 0;
+}
+
+.card-content {
+  flex: 0 0 12px;
+  display: flex;
+  align-items: center;
+}
+
+.card-content p {
+  font-size: 12px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 30s linear infinite;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+}
+
+/* .img-txt {
+  animation: infinite-scroll 40s linear infinite;
+  white-space: nowrap;
+  flex-shrink: 0; 
+}
+.img-txt1 {
+  animation: infinite-scroll 40s linear infinite; 
+  white-space: nowrap;
+  display: inline-block;
+  flex-shrink: 10; 
+} */
+
+/* .open-form-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.open-form-btn:hover {
+  background-color: #45a049;
+} */
+
+.contact-form {
+  background-color: #cccccc;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin: 20px 0 10px;
+  font-family: "Freeman", serif;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 10px;
+  background-color: #cccccc;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #000000;
+}
+
+.contact-form textarea {
+  width: 100%;
+  padding: 50px;
+  background-color: #cccccc;
+  margin-bottom: 10px;
+  border: 2px solid #000000;
+}
+
+.form-wrapper {
+  position: absolute;
+  width: 30%;
+  height: 80%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0s 0.5s;
+}
+
+.form-wrapper.fade-in {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease;
+}
+
+.form-wrapper.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0s 0.5s;
+}
+
+.close-form-btn {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.slide-in,
+.slide-out {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #1a1a1a;
+  z-index: 100;
+}
+
+.slide-in {
+  top: 0;
+  transform-origin: bottom;
+}
+
+.slide-out {
+  bottom: 0;
+  transform-origin: top;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.6s ease-out forwards;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    top: 50%;
+    width: 25%;
+  }
+}
+
+@media (min-width: 1530px) {
+  .card {
+    top: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 70%;
+  }
+}
+
+nav a {
+  position: relative;
+  text-align: center;
+}
+nav .animation {
+  position: absolute;
+  align-items: center;
+  height: 80%;
+  top: 1;
+  z-index: -1;
+  background: #ffffff;
+  border-radius: 9999px;
+  transition: all 0.5s ease 0s;
+}
+nav a.active:nth-child(1) ~ .animation {
+  width: 90px;
+  left: 0;
+}
+
+nav a.active:nth-child(2) ~ .animation {
+  width: 90px;
+  left: 115px;
+}
+
+nav a.active:nth-child(3) ~ .animation {
+  width: 90px;
+  left: 230px;
+}
+
+nav a.active:nth-child(4) ~ .animation {
+  width: 90px;
+  left: 228px;
+}
