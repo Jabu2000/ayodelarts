@@ -1,14 +1,17 @@
 import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import Lenis from "lenis";
+import ScrollToTop from "./components/ScrollTop";
+import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
 import Home from "./page/Home";
 import About from "./page/About";
 import Portfolio from "./page/Portfolio";
 import Contact from "./page/Contact";
 import Footer from "./components/Footer";
-import { AnimatePresence } from "framer-motion";
 import Navbar from "./components/Navbar";
-import { useEffect } from "react";
-import Lenis from "lenis";
-import ScrollToTop from "./components/ScrollTop";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const location = useLocation();
